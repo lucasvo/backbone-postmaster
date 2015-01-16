@@ -9,7 +9,6 @@ Object.keys(window.__karma__.files).forEach(function(file) {
   if (TEST_REGEXP.test(file)) {
     // Normalize paths to RequireJS module names.
     allTestFiles.push(pathToModule(file));
-    console.log(allTestFiles);
   }
 });
 require.config({
@@ -17,9 +16,9 @@ require.config({
   baseUrl: '/base',
   paths: {
   //  'router':'router',
-    'underscore':'libs/underscore',
-    'jquery':'libs/jquery-1.11.1',
-    'backbone':'libs/backbone'
+    'underscore':'/base/libs/underscore',
+    'jquery':'/base/libs/jquery-1.11.1',
+    'backbone':'/base/libs/backbone'
   }, 
   // dynamically load all test files
   deps: allTestFiles,

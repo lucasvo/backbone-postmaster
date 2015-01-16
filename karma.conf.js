@@ -19,7 +19,7 @@ module.exports = function(config) {
       'test/test-main.js',
       {pattern: 'backbone-postmaster.js', included: false},
       {pattern: 'test/**/*Spec.js', included: false},
-      {pattern: 'test/vendor/**/*.js', included: false}
+      {pattern: 'libs/**/*.js', included: false}
     ],
 
 
