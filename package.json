@@ -1,0 +1,36 @@
+{
+  "name"          : "backbone-postmaster",
+  "description"   : "Manage complex routes and in backbone",
+  "url"           : "http://backbonejs.org",
+  "keywords"      : ["view", "controller", "router", "backbone", "client", "browser"],
+  "author"        : "Lucas Vogelsang <l@lucasvo.com>",
+  "dependencies"  : {
+    "underscore"  : ">=1.6.0",
+    "backbone"  : ">=1.0"
+  },
+  "devDependencies": {
+    "phantomjs": "1.9.7-8",
+    "docco": "0.6.3",
+    "jslint":"0.6.6",
+    "karma":"0.12.28",
+    "karma-phantomjs-launcher":"0.1.4",
+    "karma-requirejs":"~0.2",
+    "karma-jasmine":"0.3"
+  },
+  "scripts": {
+    "test": "node_modules/karma/bin/karma start",
+    "build": "uglifyjs backbone.js --mangle --source-map backbone-min.map -o backbone-min.js",
+    "doc": "node_modules/docco/bin/docco backbone-postmaster.js",
+    "lint": "jsl -nofilelisting -nologo -conf docs/jsl.conf -process backbone.js"
+  },
+  "main": "backbone-postmaster.js",
+  "version"       : "0.0.1",
+  "license"       : "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucasvo/backbone-postmaster.git"
+  },
+  "files": [
+    "backbone-postmaster.js", "backbone-postmaster-min.js", "backbone-postmaster-min.map", "LICENSE"
+  ]
+}
